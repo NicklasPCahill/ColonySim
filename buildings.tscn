@@ -1,0 +1,48 @@
+[gd_scene load_steps=4 format=3 uid="uid://n41a0htu57s0"]
+
+[ext_resource type="Script" path="res://Scripts/Buildings.gd" id="1_gy0c2"]
+[ext_resource type="Script" path="res://Scripts/House.gd" id="2_76lgn"]
+[ext_resource type="Script" path="res://Farm.gd" id="3_0q86x"]
+
+[node name="Buildings" type="Node2D"]
+script = ExtResource("1_gy0c2")
+
+[node name="House" type="Node2D" parent="."]
+script = ExtResource("2_76lgn")
+
+[node name="HouseBlock" type="Polygon2D" parent="House"]
+position = Vector2(10, 28)
+color = Color(0.6, 0.392157, 0.121569, 1)
+polygon = PackedVector2Array(-110, -113, 116, -115, 115, 81, -106, 79)
+
+[node name="Roof" type="Polygon2D" parent="House"]
+position = Vector2(14, 13)
+color = Color(0.729412, 0.721569, 0.133333, 1)
+polygon = PackedVector2Array(-179, -93, 178, -93, 2, -225)
+
+[node name="Farm" type="Node2D" parent="."]
+visible = false
+position = Vector2(1, -13)
+script = ExtResource("3_0q86x")
+
+[node name="Land" type="Polygon2D" parent="Farm"]
+position = Vector2(0.999992, 3)
+scale = Vector2(0.415512, 0.94382)
+color = Color(0.513726, 0.34902, 0, 1)
+polygon = PackedVector2Array(-184, -70, 177, -69, 177, 108, -182, 108)
+
+[node name="Crops" type="Polygon2D" parent="Farm"]
+position = Vector2(312, 65)
+color = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-351, -123, -359, -80, -355, 29, -343, 32, -341, -119)
+
+[node name="Crops2" type="Polygon2D" parent="Farm"]
+position = Vector2(387, 69)
+color = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-351, -123, -350, -82, -347, -56, -348, -25, -355, 29, -343, 32, -334, -78, -341, -119)
+
+[node name="Crops3" type="Polygon2D" parent="Farm"]
+position = Vector2(289, 70)
+scale = Vector2(0.818182, 1)
+color = Color(1, 1, 0, 1)
+polygon = PackedVector2Array(-351, -123, -352, -85, -355, 29, -343, 32, -339.111, -18, -337.333, -90, -341, -119)
